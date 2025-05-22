@@ -1,0 +1,10 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+#dog-image {
+  width: 300px;
+  height: auto;
+  margin-top: 20px;
+}
