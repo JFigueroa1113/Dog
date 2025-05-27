@@ -4,15 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dogs!</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="data:,">
 </head>
 <body>
   <h1>Random Dogs</h1>
   <div id="dog-info">
     <img id="dog-image" src="" alt="Random Dog" />
     <p id="breed-name"></p>
+    <p id="dog-temperament">Temperament goes here</p>
+    <p id="dog-origin"></p>
   </div>
+  <p id="dog-origin"></p>
   <button onclick="getDog()">Get New Dog</button>
+  <!-- Second Fetch Thingy -->
+  <div id="dog-fact-box"> 
+    <h2>Dog Fun Fact</h2>
+    <button onclick="getDogFact()">Get Dog Fact</button>
+    <p id="dog-fact"></p>
+  </div>
 
   <script src="index.js"></script>
 </body>

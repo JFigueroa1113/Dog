@@ -1,10 +1,52 @@
 body {
   text-align: center;
   font-family: Arial, sans-serif;
+  background-color: #a8d5fc;
+  margin: 0;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+#dog-info {
+  margin: 1.25rem auto;
+  padding: 1.25rem;
+  border: 0.125rem solid #ccc;
+  border-radius: 8px;
+  width: 60%;
+  background-color: #fff;
+  box-shadow: 0 20.125rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 #dog-image {
-  width: 300px;
+  width: auto;
   height: auto;
-  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+
+#dog-fact-box {
+  margin-top: 2.5rem;             
+  padding: 1.25rem;              
+  border-top: 0.125rem dashed rgb(151, 143, 143); 
+}
+
+button {
+  margin-top: 1.25rem;           
+  padding: 0.625rem 1.25rem;   
+  font-size: 1rem;    
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 0.3125rem;  
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+p {
+  font-size: 1.125rem;  
+  color: rgb(66, 66, 66);
 }
