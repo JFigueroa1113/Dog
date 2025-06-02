@@ -9,20 +9,30 @@
 </head>
 <body>
   <h1>Random Dogs</h1>
-  <div id="dog-info">
+
+  <nav>
+    <button onclick="showSection('random-dog')">Random Dog</button>
+    <button onclick="showSection('breed-list')">Breed List</button>
+  </nav>
+
+  <section id="random-dog" class="content-section"></section>
+    <div id="dog-info">
     <img id="dog-image" src="" alt="Random Dog" />
     <p id="breed-name"></p>
     <p id="dog-temperament">Temperament goes here</p>
     <p id="dog-origin"></p>
-  </div>
-  <p id="dog-origin"></p>
-  <button onclick="getDog()">Get New Dog</button>
+    <button onclick="getDog()">Get New Dog</button>
+    </div>
+  </section>
+ 
   <!-- Second Fetch Thingy -->
+   <section id="breed-list" class="content-section" style="display: none;"></section>
   <div id="dog-fact-box"> 
-    <h2>Dog Fun Fact</h2>
-    <button onclick="getDogFact()">Get Dog Fact</button>
-    <p id="dog-fact"></p>
+    <h2>Dog Breeds</h2>
+    <ul id="breed-ul"></ul>
+    <button onclick="getBreeds()">Refresh Breed List</button>
   </div>
+</section>
 
   <script src="index.js"></script>
 </body>

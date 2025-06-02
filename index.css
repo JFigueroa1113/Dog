@@ -1,4 +1,4 @@
-body {
+html, body {
   text-align: center;
   font-family: Arial, sans-serif;
   background-color: #a8d5fc;
@@ -20,9 +20,10 @@ h1, h2 {
 }
 
 #dog-image {
-  width: auto;
+  max-width: 100%;
   height: auto;
   margin-top: 1.25rem;
+  border-radius: .5rem;
 }
 
 #dog-fact-box {

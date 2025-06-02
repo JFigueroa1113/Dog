@@ -1,3 +1,17 @@
+
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.content-section');
+  sections.forEach(sec => {
+    sec.style.display = (sec.id === sectionId) ? 'block' : 'none';
+  });
+
+  if (sectionId === 'random-dog') {
+    getDog(); // Load a random dog
+  } else if (sectionId === 'breed-list') {
+    getBreeds(); // Load breed list
+  }
+}
+
 async function getDog() {
   try {
     const response = await fetch("https://api.thedogapi.com/v1/images/search?has_breeds=1&api_key=live_W1bVWn6lmxGl1s2Z9BD3ZGDYUFSGC7DTA603LpJIBIp7j6cOCxBwzoG2MdBZHDkP");
@@ -18,15 +32,19 @@ async function getDog() {
   }
 }
 
-async function getDogFact() {
+async function getBreeds() {
   try {
-    const response = await fetch("https://dog-api.kinduff.com/api/facts");
-    const data = await response.json();
-    document.getElementById("dog-fact").textContent = `Fact: ${data.facts[0]}`;
+    const response = await fetch("https://api.thedogapi.com/v1/breeds");
+    const breeds = await response.json();
+
+    const list = document.getElementById("breed-ul");
+    list.innerHTML = ""; 
+    breeds.forEach(breed => {
+      const li = document.createElement("li");
+      li.textContent = `${breed.name} — ${breed.temperament || "No temperament info"}`;
+      list.appendChild(li);
+    });
   } catch (error) {
-    console.error("Error fetching dog fact:", error);
+    console.error("Error fetching breed list:", error);
   }
 }
-
-
-getDog();
